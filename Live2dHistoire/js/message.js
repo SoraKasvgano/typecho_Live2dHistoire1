@@ -483,7 +483,9 @@ if(!norunFlag){
 		else if(live2d_type == 4)
 		{
 			var AIimgSrc = [
-				message_Path+"model/tia/textures/default-costume.png"
+				message_Path+"model/tia/textures/default-costume.png",
+				message_Path+"model/tia/textures/jersey-costume-blue.png",
+				message_Path+"model/tia/textures/pajamas-costume-green.png"
 			];
 		}
 		else if(live2d_type == 5)
