@@ -74,6 +74,9 @@ if(!norunFlag){
 			else if(live2d_type == 4){
 				msgType = 'message_pio_tia.json';
 			}
+			else if(live2d_type == 5){
+				msgType = 'message_pio_tia.json';
+			}
 			$.ajax({
 				cache: true,
 				url: message_Path+msgType,
@@ -483,6 +486,12 @@ if(!norunFlag){
 				message_Path+"model/tia/textures/default-costume.png"
 			];
 		}
+		else if(live2d_type == 5)
+		{
+			var AIimgSrc = [
+				message_Path+"model/xuexiaoban/model.2048/texture_00.png"
+			];
+		}
 		var images = [];
 		var imgLength = AIimgSrc.length;
 		var loadingNum = 0;
@@ -518,6 +527,10 @@ if(!norunFlag){
 						else if(live2d_type == 4)
 						{
 							loadlive2d("live2d",  message_Path+"/model/tia/model.json");
+						}
+						else if(live2d_type == 4)
+						{
+							loadlive2d("live2d",  message_Path+"/model/xuexiaoban/model.json");
 						}
 					},1000);
 					initLive2d ();

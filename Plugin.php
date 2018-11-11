@@ -48,7 +48,7 @@ class Live2dHistoire_Plugin implements Typecho_Plugin_Interface
     {
        /**表单设置 */
        $live2d_type = new Typecho_Widget_Helper_Form_Element_Radio(
-        'live2d_type', array ('0' => '伊斯特瓦尔', '1' => '雷姆', '3' => 'pio', '4' => 'tia'), 0,
+        'live2d_type', array ('0' => '伊斯特瓦尔', '1' => '雷姆', '3' => 'pio', '4' => 'tia', '5' => '血小板'), 0,
         '设置live2d人物', '');
         $form->addInput($live2d_type);
 		$appkey = new Typecho_Widget_Helper_Form_Element_Text('appkey', NULL, NULL, _t('图灵机器人APIkey'));
