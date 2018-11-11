@@ -68,6 +68,12 @@ if(!norunFlag){
 			else if(live2d_type == 1){
 				msgType = 'message_rem.json';
 			}
+			else if(live2d_type == 3){
+				msgType = 'message_pio_tia.json';
+			}
+			else if(live2d_type == 4){
+				msgType = 'message_pio_tia.json';
+			}
 			$.ajax({
 				cache: true,
 				url: message_Path+msgType,
@@ -448,16 +454,33 @@ if(!norunFlag){
 		};
 	}
 	$(document).ready(function() {
-		if(live2d_type == 0){
+		if(live2d_type == 0)
+		{
 			var AIimgSrc = [
 				message_Path+"model/histoire/histoire.1024/texture_00.png",
 				message_Path+"model/histoire/histoire.1024/texture_01.png",
 				message_Path+"model/histoire/histoire.1024/texture_02.png",
 				message_Path+"model/histoire/histoire.1024/texture_03.png"
 			];
-		}else if(live2d_type == 1){
+		}
+		else if(live2d_type == 1)
+		{
 			var AIimgSrc = [
 				message_Path+"model/rem/remu2048/texture_00.png"
+			];
+		}
+		else if(live2d_type == 3)
+		{
+			var AIimgSrc = [
+				message_Path+"model/Pio/textures/default-costume.png",
+				message_Path+"model/Pio/textures/pajamas-costume.png",
+				message_Path+"model/Pio/textures/school-costume.png"
+			];
+		}
+		else if(live2d_type == 4)
+		{
+			var AIimgSrc = [
+				message_Path+"model/tia/textures/default-costume.png"
 			];
 		}
 		var images = [];
@@ -480,10 +503,21 @@ if(!norunFlag){
 						},1300);
 					}
 					setTimeout(function(){
-						if(live2d_type == 0){
+						if(live2d_type == 0)
+						{
 							loadlive2d("live2d",  message_Path+"/model/histoire/model.json");
-						}else if(live2d_type == 1){
+						}
+						else if(live2d_type == 1)
+						{
 							loadlive2d("live2d",  message_Path+"/model/rem/rem.json");
+						}
+						else if(live2d_type == 3)
+						{
+							loadlive2d("live2d",  message_Path+"/model/Pio/model.json");
+						}
+						else if(live2d_type == 4)
+						{
+							loadlive2d("live2d",  message_Path+"/model/tia/model.json");
 						}
 					},1000);
 					initLive2d ();
