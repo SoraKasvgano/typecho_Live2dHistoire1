@@ -528,7 +528,7 @@ if(!norunFlag){
 						{
 							loadlive2d("live2d",  message_Path+"/model/tia/model.json");
 						}
-						else if(live2d_type == 4)
+						else if(live2d_type == 5)
 						{
 							loadlive2d("live2d",  message_Path+"/model/xuexiaoban/model.json");
 						}
