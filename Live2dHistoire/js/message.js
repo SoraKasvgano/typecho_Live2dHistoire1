@@ -77,6 +77,9 @@ if(!norunFlag){
 			else if(live2d_type == 5){
 				msgType = 'message_pio_tia.json';
 			}
+			else if(live2d_type == 6){
+				msgType = 'message_pio_tia.json';
+			}
 			$.ajax({
 				cache: true,
 				url: message_Path+msgType,
@@ -494,6 +497,13 @@ if(!norunFlag){
 				message_Path+"model/xuexiaoban/model.2048/texture_00.png"
 			];
 		}
+		
+		else if(live2d_type == 6)
+		{
+			var AIimgSrc = [
+				message_Path+"model/katou_01/moc/katou.2048/texture_00.png"
+			];
+		}
 		var images = [];
 		var imgLength = AIimgSrc.length;
 		var loadingNum = 0;
@@ -533,6 +543,10 @@ if(!norunFlag){
 						else if(live2d_type == 5)
 						{
 							loadlive2d("live2d",  message_Path+"/model/xuexiaoban/model.json");
+						}
+						else if(live2d_type == 6)
+						{
+							loadlive2d("live2d",  message_Path+"/model/katou_01/katou_01.model.json");
 						}
 					},1000);
 					initLive2d ();
