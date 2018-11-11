@@ -1,2 +1,4 @@
 # typecho_Live2dHistoire1
-原作者https://www.wikimoe.com/
+add pio and tia
+
+原作者https://github.com/eeg1412/Live2dHistoire
